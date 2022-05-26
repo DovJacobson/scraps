@@ -1,5 +1,7 @@
 // recursively convert all fbx files into glb files in a sparse replica of the file tree
 
+// using windows command lione
+
 // typical usage C:/Project/Assets> node fbx2glb.js >log.txt
 
 
@@ -35,15 +37,6 @@ const convert = path =>new Promise(  (resolve,reject) =>
         if( err?.code>0 )   reject( err )
         else                resolve( result )
         }));
-
-
-const list = str =>new Promise(  (resolve,reject) =>resolve( str ));
-    
-    
-
-
-var depth=0;
-
 
 const dirwalk =  name =>{
 
